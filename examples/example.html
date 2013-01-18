@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Test</title>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js"></script>
+  <script src="../jquery.doneTyping.js"></script>
+  <script>
+    $(function() {
+      $("#search").doneTyping(function(val) {
+        $("#search_output").html('We could do something with <strong>' + val + '</strong>');
+      });
+    });
+  </script>
+</head>
+<body>
+<form action="">
+  <p>
+    <label for="search">Search</label>
+    <input type="text" id="search" />
+    <div id="search_output"></div>
+  </p>
+</form>
+</body>
+</html>
