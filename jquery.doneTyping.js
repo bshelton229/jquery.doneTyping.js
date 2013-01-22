@@ -49,6 +49,10 @@
   , blur: function (e) {
       if ( this.options.blur ) this.options.blur.call(this.element, e, this.options);
     }
+
+  , trim: function(s) {
+      return s.replace(/^\s+/, '').replace(/\s+$/, '');
+    }
   }
 
   // jQuery plugin definition
