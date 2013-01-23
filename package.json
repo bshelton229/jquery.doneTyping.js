@@ -4,6 +4,7 @@
   "dependencies": {
     "jquery": "*",
     "jsdom": "*",
-    "jasmine-node": "*"
+    "jasmine-node": "*",
+    "uglify-js": "2.2.x"
   }
 }
