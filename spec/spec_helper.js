@@ -1,7 +1,7 @@
-global.window = require("jsdom")
+window = require("jsdom")
                 .jsdom()
                 .createWindow();
 
-global.jQuery = require("jquery");
+jQuery = require("jquery");
 
 require('../jquery.doneTyping.js');
