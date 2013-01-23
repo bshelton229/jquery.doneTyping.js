@@ -10,7 +10,7 @@ $("#search").doneTyping(function(val, opts) {
 });
 
 $("#search").doneTyping({
-  delay: 600, // miliseconds (default is 500)
+  delay: 600, // milliseconds (default is 500)
   success: function(val, opts) {
     // Do something
   }
