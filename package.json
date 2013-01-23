@@ -2,7 +2,7 @@
   "name": "jquery.doneTyping",
   "version": "0.0.1",
   "dependencies": {
-    "jquery": "*",
+    "jquery": "1.8.x",
     "jsdom": "*",
     "jasmine-node": "*",
     "uglify-js": "2.2.x"
