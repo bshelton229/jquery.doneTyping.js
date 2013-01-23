@@ -6,6 +6,7 @@
     this.$element = $(element);
     this.options = $.extend({}, $.fn.doneTyping.defaults, options);
     this.bindEvents();
+    this.last_val = undefined;
   }
 
   DoneTyping.prototype = {
@@ -34,15 +35,19 @@
         case 27:  // Escape
           break;
         default:
-          this.success();
+          this.run();
       }
     }
 
-  , success: function() {
+  , run: function() {
     var self = this;
     if ( this.defer ) clearTimeout(this.defer);
     this.defer = setTimeout(function() {
-      if ( self.options.success ) self.options.success.call(self.element, self.$element.val(), self.options);
+      var new_val = self.trim( self.$element.val() );
+      if ( self.last_val != new_val ) {
+        self.last_val = self.trim(self.$element.val());
+        if ( self.options.success ) self.options.success.call(self.element, self.$element.val(), self.options);
+      }
     }, this.options.delay);
   }
 

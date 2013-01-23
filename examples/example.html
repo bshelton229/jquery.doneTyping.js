@@ -6,7 +6,7 @@
   <script>
     $(function() {
       $("#search").doneTyping(function(val) {
-        $("#search_output").html('We could do something with <strong>' + val + '</strong>');
+        $("#search_output").html('We could do something with <strong>' + val + '</strong> : ' + Date.now());
       });
     });
   </script>
@@ -15,7 +15,7 @@
 <form action="">
   <p>
     <label for="search">Search</label>
-    <input type="text" id="search" />
+    <input type="text" id="search" autocomplete="off" />
     <div id="search_output"></div>
   </p>
 </form>
